@@ -2,18 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby';
 
 const Menu = () => (
-    <div style={{
-        background: '#f4f4f4',
-        paddingTop: '10px'
-    }}>
-        <ul style={{
-            listStyle: 'none',
-            display: 'flex',
-            justifyContent: 'space-evenly'
-        }}>
+    <div class="menu-custom">
+        <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Services</Link></li>
+            {/* <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/services">Services</Link></li> */}
             <li><Link to="/docu">Documentation</Link></li>
         </ul>
     </div>

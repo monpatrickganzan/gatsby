@@ -5,18 +5,18 @@ import { graphql } from 'gatsby'
 
 const DocuPage = ({data}) => (
     <Layout>
-        <div>
-            <h1>Latest Documents</h1>
+        <div  class="docu-background-custom">
+            <h2>Latest Documents</h2>
+            <hr />
             {data.allMarkdownRemark.edges.map(post => (
-                <div key={ post.node.id }>
+                <div key={ post.node.id } class="docu-column-custom">
                     <h3>{ post.node.frontmatter.title }</h3>
                     <small>Posted by { post.node.frontmatter.author } on { post.node.frontmatter.date }</small>
                     <br/>
-                    <button>
-                        <Link to={post.node.frontmatter.path}>Read More</Link>
-                    </button>
+                    <Link to={post.node.frontmatter.path} class="read-more-btn">Read More</Link>
                     <br />
                     <br />
+                    <hr />
                 </div>
             ))}
         </div>

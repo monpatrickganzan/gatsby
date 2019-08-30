@@ -1,42 +1,17 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import logo from "../images/fligno_logo.png"
+import Menu from "./menu"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#030303`,
-      marginBottom: `0`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header class="header-main-custom">
+    <div class="header-custom">
+      <Link to="/">
+        <img src={logo} alt="Fligno Documentation" />
+      </Link>
+      <Menu/>
+    </div>  
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
