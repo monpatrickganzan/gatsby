@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 
-const DocuPage = ({data}) => (
+const AdminActivitiesPage = ({data}) => (
     <Layout>
         <div  class="page-background-custom">
-            <h2>Latest Documents</h2>
+            <h2>Admin Resources</h2>
             <hr />
             {data.allMarkdownRemark.edges.map(post => (
                 <div key={ post.node.id } class="docu-column-custom">
@@ -24,8 +24,11 @@ const DocuPage = ({data}) => (
 )
 
 export const pageQuery = graphql`
-    query DocuIndexQuery {
-        allMarkdownRemark {
+    query AdminIndexQuery {
+        allMarkdownRemark (
+            filter: { fileAbsolutePath: { glob: "**/src/pages/admin/activities/*.md" } }
+            sort: { order: DESC, fields: frontmatter___date }
+        )  {
             edges {
                 node {
                     id
@@ -41,5 +44,5 @@ export const pageQuery = graphql`
     }
 `
 
-export default DocuPage;
+export default AdminActivitiesPage;
 

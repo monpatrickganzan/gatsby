@@ -3,7 +3,7 @@ import React from "react"
 import logo from "../images/fligno_logo.png"
 import Menu from "./menu"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header class="header-main-custom">
     <div class="header-custom">
       <Link to="/">

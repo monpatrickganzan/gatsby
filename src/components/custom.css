@@ -1,3 +1,49 @@
+body {
+    background-image: linear-gradient(135deg, rgba(19, 176, 223, 0.26) 0%, rgba(19, 176, 223, 0.26) 23%,rgba(16, 160, 197, 0.26) 23%, rgba(16, 160, 197, 0.26) 65%,rgba(13, 144, 172, 0.26) 65%, rgba(13, 144, 172, 0.26) 70%,rgba(9, 129, 146, 0.26) 70%, rgba(9, 129, 146, 0.26) 74%,rgba(6, 113, 121, 0.26) 74%, rgba(6, 113, 121, 0.26) 90%,rgba(3, 97, 95, 0.26) 90%, rgba(3, 97, 95, 0.26) 100%),linear-gradient(45deg, rgba(65, 234, 230, 0.26) 0%, rgba(65, 234, 230, 0.26) 28%,rgba(88, 192, 215, 0.26) 28%, rgba(88, 192, 215, 0.26) 55%,rgba(110, 150, 201, 0.26) 55%, rgba(110, 150, 201, 0.26) 66%,rgba(133, 107, 186, 0.26) 66%, rgba(133, 107, 186, 0.26) 80%,rgba(155, 65, 172, 0.26) 80%, rgba(155, 65, 172, 0.26) 85%,rgba(178, 23, 157, 0.26) 85%, rgba(178, 23, 157, 0.26) 100%),linear-gradient(90deg, rgb(27, 194, 246) 0%, rgb(27, 194, 246) 6%,rgb(39, 174, 237) 6%, rgb(39, 174, 237) 32%,rgb(50, 155, 229) 32%, rgb(50, 155, 229) 40%,rgb(62, 135, 220) 40%, rgb(62, 135, 220) 66%,rgb(74, 116, 211) 66%, rgb(74, 116, 211) 72%,rgb(86, 96, 202) 72%, rgb(86, 96, 202) 86%,rgb(97, 77, 194) 86%, rgb(97, 77, 194) 96%,rgb(109, 57, 185) 96%, rgb(109, 57, 185) 100%);
+}
+
+footer {
+    width: 100%;
+}
+
+/* Footer */
+.footer-custom {
+    text-align: center;
+    background-color: #127C9E;
+    padding: 7px;
+    font-size: 13px;
+}
+
+/* Page Main Background */
+.page-background-custom {
+    padding: 50px 70px;
+}
+
+.page-background-custom h1, .page-background-custom h2, .page-background-custom h3 {
+    color: #fff;
+}
+
+.page-background-custom h5 {
+    color: #333;
+}
+
+.page-background-custom h2 {
+    font-size: 50px;
+}
+
+.docu-column-custom {
+    width: 50%;
+}
+
+.page-background-custom .docu-column-custom {
+    display: inline-block;
+}
+
+.docu-column-custom hr {
+    width: 80%;
+}
+
+/* Header */
 .header-main-custom {
     background: #fff;
     margin-bottom: 0;
@@ -12,43 +58,52 @@
     margin: 0 auto;
 }
 
-/* .footer-custom {
-    margin: 0px 20px;
-    max-width: 100%;
-    padding: 0px 1.0875rem 1.45rem;
-    padding-top: 0;
-} */
-
 .header-custom img {
     float: left;
 }
 
+/* Menu */
 .menu-custom {
     float: right;
     padding: 15px;
+    text-transform: uppercase;
 }
 
 .menu-custom ul {
+    position: relative;
     display: flex;
     list-style: none;
 }
 
 .menu-custom li {
     padding-right: 50px;
+    font-size: 17px;
+    font-family: "Bookman Old Style";
 }
 
-.main-background-custom, .docu-background-custom {
-    background-color: transparent;
-    background-image: linear-gradient(360deg, rgba(32,42,61,0.98) 0%, rgba(37,134,232,0.8) 93%);
-    opacity: 1;
-    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
-    padding: 20px 70px;
+.admin-sub-menu, .nmg-sub-menu, .rnd-sub-menu, .sre-sub-menu, .del-sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    max-width: 100%;
 }
 
-.main-background-custom {
-    height: 89vh;
+.admin-dropdown:hover .admin-sub-menu, .nmg-dropdown:hover .nmg-sub-menu, .rnd-dropdown:hover .rnd-sub-menu, .sre-dropdown:hover .sre-sub-menu, .del-dropdown:hover .del-sub-menu {
+    display: block;
 }
 
+.admin-sub-menu li, .nmg-sub-menu li, .rnd-sub-menu li, .sre-sub-menu li, .del-sub-menu li {
+    margin: auto;
+    padding: 15px;
+}
+
+.admin-sub-menu li:hover, .nmg-sub-menu li:hover, .rnd-sub-menu li:hover, .sre-sub-menu li:hover, .del-sub-menu li:hover {
+    background-color: #dddddd; 
+}
+
+/* Index Page */
 .main-background-custom h1 {
     color: #fff;
     position: absolute;
@@ -68,30 +123,6 @@
     left: 180px;
 }
 
-.docu-background-custom h1, .docu-background-custom h2, .docu-background-custom h3 {
-    color: #fff;
-}
-
-.docu-background-custom h5 {
-    color: #333;
-}
-
-.docu-background-custom h2 {
-    font-size: 50px;
-}
-
-.docu-column-custom {
-    width: 50%;
-}
-
-.docu-background-custom .docu-column-custom {
-    display: inline-block;
-}
-
-.docu-column-custom hr {
-    width: 80%;
-}
-
 .read-more-btn, .go-back-btn {
     background-color: #5ab8ce;
     border: none;
@@ -106,7 +137,34 @@
     border-radius: 5px;
 }
 
-.read-more-btn:hover, .go-back-btn:hover {
+/* Read More Button */
+.read-more-btn:hover {
     color: #fff;
     background-color: #00cfff;
+}
+
+/* Single Docu Page */
+.md-file-content h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+.md-file-content p {
+    font-size: 2.3rem;
+    text-align: center;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.md-file-content p:before {
+    content: open-quote;
+}
+
+.md-file-content p:after {
+    content: close-quote;
+}
+
+.md-file-content h5 {
+    text-align: right;
+    font-size: 12px;
 }

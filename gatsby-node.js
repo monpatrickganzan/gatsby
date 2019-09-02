@@ -32,6 +32,6 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
                 path: node.frontmatter.path,
                 component: postTemplate
             })
-        }) 
+        })
     })
 }

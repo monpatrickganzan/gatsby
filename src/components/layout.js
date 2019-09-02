@@ -3,37 +3,20 @@ import React from "react"
 // import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import Menu from "./menu"
 import "./layout.css"
 import "./custom.css"
+import Footer from "./footer.js"
 
 const Layout = ({ children }) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
       <Header />
-      {/* <Menu /> */}
-      <div class="footer-custom">
+      <div class="background-main">
         <main>{children}</main>
       </div>
-      {/* <footer>
-        © Fligno 2017
-      </footer> */}
+      <Footer />
     </>
   )
 }
-
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
 
 export default Layout
