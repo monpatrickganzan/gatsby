@@ -1,5 +1,6 @@
 body {
     background-image: linear-gradient(135deg, rgba(19, 176, 223, 0.26) 0%, rgba(19, 176, 223, 0.26) 23%,rgba(16, 160, 197, 0.26) 23%, rgba(16, 160, 197, 0.26) 65%,rgba(13, 144, 172, 0.26) 65%, rgba(13, 144, 172, 0.26) 70%,rgba(9, 129, 146, 0.26) 70%, rgba(9, 129, 146, 0.26) 74%,rgba(6, 113, 121, 0.26) 74%, rgba(6, 113, 121, 0.26) 90%,rgba(3, 97, 95, 0.26) 90%, rgba(3, 97, 95, 0.26) 100%),linear-gradient(45deg, rgba(65, 234, 230, 0.26) 0%, rgba(65, 234, 230, 0.26) 28%,rgba(88, 192, 215, 0.26) 28%, rgba(88, 192, 215, 0.26) 55%,rgba(110, 150, 201, 0.26) 55%, rgba(110, 150, 201, 0.26) 66%,rgba(133, 107, 186, 0.26) 66%, rgba(133, 107, 186, 0.26) 80%,rgba(155, 65, 172, 0.26) 80%, rgba(155, 65, 172, 0.26) 85%,rgba(178, 23, 157, 0.26) 85%, rgba(178, 23, 157, 0.26) 100%),linear-gradient(90deg, rgb(27, 194, 246) 0%, rgb(27, 194, 246) 6%,rgb(39, 174, 237) 6%, rgb(39, 174, 237) 32%,rgb(50, 155, 229) 32%, rgb(50, 155, 229) 40%,rgb(62, 135, 220) 40%, rgb(62, 135, 220) 66%,rgb(74, 116, 211) 66%, rgb(74, 116, 211) 72%,rgb(86, 96, 202) 72%, rgb(86, 96, 202) 86%,rgb(97, 77, 194) 86%, rgb(97, 77, 194) 96%,rgb(109, 57, 185) 96%, rgb(109, 57, 185) 100%);
+    height: 100%;
 }
 
 footer {
@@ -9,7 +10,7 @@ footer {
 /* Footer */
 .footer-custom {
     text-align: center;
-    background-color: #127C9E;
+    background-color: #23a9d8;
     padding: 7px;
     font-size: 13px;
 }
@@ -103,27 +104,31 @@ footer {
     background-color: #dddddd; 
 }
 
+li.admin-menu a:after, li.nmg-menu a:after, li.rnd-menu a:after, li.sre-menu a:after, li.del-menu a:after {
+    content: ' ▾';
+}
+
 /* Index Page */
+.background-main, .background-main {
+    height: calc(100vh - 90px);
+}
+
 .main-background-custom h1 {
-    color: #fff;
+    text-align: center !important;
     position: absolute;
-    height: 50px;
+    left: 50%;
     top: 50%;
-    left: 31%;
-    margin-top: -26px;
-    text-align: center;
-    font-size: 60px;
-    text-shadow: 5px 4px #201d38;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #f7e4e4;
+    font-weight: bold;
+    /* background-color: rgba(228, 241, 254, 0.7); */
+    /* padding: 30px; */
+    /* text-shadow: 5px 4px #201d38; */
+    /* color: rgb(35, 169, 216); */
 }
 
-.main-background-custom img {
-    position: absolute;
-    width: 15%;
-    top: 36%;
-    left: 180px;
-}
-
-.read-more-btn, .go-back-btn {
+.read-more-btn {
     background-color: #5ab8ce;
     border: none;
     color: #333;
@@ -135,6 +140,14 @@ footer {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.main-background-custom {
+    background-image: linear-gradient(360deg, rgba(32,42,61,0.98) 0%, rgba(37,134,232,0.8) 93%), url("../images/bg-main.jpg");
+    height: calc(100vh - 90px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Read More Button */
