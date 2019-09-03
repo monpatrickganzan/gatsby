@@ -3,16 +3,17 @@ body {
     height: 100%;
 }
 
-footer {
-    width: 100%;
-}
-
 /* Footer */
 .footer-custom {
     text-align: center;
     background-color: #23a9d8;
     padding: 7px;
     font-size: 13px;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
 }
 
 /* Page Main Background */
@@ -163,7 +164,7 @@ li.admin-menu a:after, li.nmg-menu a:after, li.rnd-menu a:after, li.sre-menu a:a
 }
 
 .md-file-content p {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
     text-align: center;
     line-height: 1.5;
     font-style: italic;
