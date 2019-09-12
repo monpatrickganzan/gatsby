@@ -7,7 +7,7 @@ const IndexPage = () => (
   <Layout>
     <div class="main-background-custom">
       {/* <img src={logo} alt="Fligno Documentation" /> */}
-      <h1>FLIGNO DOCUMENTATION</h1>
+      <h1 class="home-text">FLIGNO DOCUMENTATION</h1>
     </div>
   </Layout>
 )

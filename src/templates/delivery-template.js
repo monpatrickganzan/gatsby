@@ -8,8 +8,8 @@ export default  function Template({data}) {
 
     return(
         <Layout>
-            <div class="docu-background-custom">
-                <Link to="/docu" class="go-back-btn">Go Back</Link>
+            <div className="docu-background-custom">
+                <Link to="/docu" className="go-back-btn">Go Back</Link>
                 <hr />
                 <h1>{ post.frontmatter.title }</h1>
                 <h5>Posted by { post.frontmatter.author } on { post.frontmatter.date }</h5>

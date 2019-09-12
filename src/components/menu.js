@@ -56,6 +56,8 @@ const Menu = () => (
                 </div>
             </div>
 
+            <li><Link to="/upload">Upload</Link></li>
+
             {/* <li><Link to="/docu">Documentation</Link></li> */}
         </ul>
     </div>
