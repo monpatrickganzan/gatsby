@@ -276,4 +276,5 @@ li.admin-menu a:after, li.nmg-menu a:after, li.rnd-menu a:after, li.sre-menu a:a
     float: right;
     padding-top: 3%;
     font-size: 20px;
+    padding-left: 50px;
 }

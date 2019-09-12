@@ -7,6 +7,13 @@ const UploadPage = () => {
     
     const form = useRef(null);
     const file = useRef(null);
+    const [fileName, setFileName] = useState('')
+
+    const handleChange = (file) => {
+        console.log(file)
+        setFileName(file[0].name)
+    }
+    
 
     const handleSubmit = async (evt) => {
         evt.preventDefault();
@@ -15,52 +22,23 @@ const UploadPage = () => {
 
         var customText = document.getElementById("file-upload-filename");
 
-        customText.innerHTML = file.value;
+        // customText.innerHTML = file.value;
     }
-    
-        // var realFileBtn = document.getElementById("real-file");
-        // var customBtn = document.getElementById("custom-button");
-        // var customTxt = document.getElementById("custom-text");
-
-        // customBtn.addEventListener("click", function() {
-        //     realFileBtn.click()
-        // });
-    
-        // realFileBtn.addEventListener("change", function() {
-        //     if (realFileBtn.value) {
-        //         customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-        //     } else {
-        //         customTxt.innerHTML = "No file chosen, yet.";
-        //     }
-        // });
-
-        // onClick( event ) {
-        //     realFileBtn.click();
-        // }
-
-        // onChange( event ) {
-        //     if (realFileBtn.value) {
-        //         customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-        //     } else {
-        //         customTxt.innerHTML = "No file chosen, yet.";
-        //     }
-        // }
 
  return (
     <Layout>
     <div className="main-background-custom">
       <div className="upload-field">
         <form className="upload-panel" ref={form} onSubmit={handleSubmit}>
-        {/* <form className="upload-panel"> */}
             <h1>Upload Markdown File</h1>
 
-            <input type="file" name="file" id="file" className="inputfile" ref={file} />
+            <input type="file" name="file" id="file" className="inputfile" ref={file} onChange={ (e) => handleChange(e.target.files) } />
             <label htmlFor="file">Choose a file</label>
 
             {/* <input type="file" id="real-file" hidden="hidden" />
             <button type="button" id="custom-button" onClick={this.onClick} onChange={this.onChange}>CHOOSE A FILE</button>
             <span id="custom-text">No file chosen, yet.</span> */}
-            <div id="file-upload-filename" class="file-upload"></div>
+            <div id="file-upload-filename" class="file-upload">{fileName}</div>
             <br />
             <div className="department">
                 <label>Department:</label>
